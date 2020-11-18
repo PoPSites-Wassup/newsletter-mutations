@@ -74,7 +74,7 @@ class NewsletterUnsubscriptionMutationResolver extends AbstractMutationResolver
     {
     }
 
-    protected function doExecute($newsletter_data)
+    protected function doExecute(array $newsletter_data)
     {
         $cmsapplicationapi = \PoP\Application\FunctionAPIFactory::getInstance();
         $to = \PoP_EmailSender_Utils::getAdminNotificationsEmail();

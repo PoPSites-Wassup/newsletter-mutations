@@ -4,17 +4,17 @@ declare(strict_types=1);
 
 namespace PoPSitesWassup\NewsletterMutations\MutationResolverBridges;
 
-use Symfony\Contracts\Service\Attribute\Required;
 use PoP\ComponentModel\MutationResolvers\MutationResolverInterface;
 use PoPSitesWassup\FormMutations\MutationResolverBridges\AbstractFormComponentMutationResolverBridge;
 use PoPSitesWassup\NewsletterMutations\MutationResolvers\NewsletterUnsubscriptionMutationResolver;
+use Symfony\Contracts\Service\Attribute\Required;
 
 class NewsletterUnsubscriptionMutationResolverBridge extends AbstractFormComponentMutationResolverBridge
 {
     protected NewsletterUnsubscriptionMutationResolver $newsletterUnsubscriptionMutationResolver;
 
     #[Required]
-    public function autowireNewsletterUnsubscriptionMutationResolverBridge(
+    final public function autowireNewsletterUnsubscriptionMutationResolverBridge(
         NewsletterUnsubscriptionMutationResolver $newsletterUnsubscriptionMutationResolver,
     ): void {
         $this->newsletterUnsubscriptionMutationResolver = $newsletterUnsubscriptionMutationResolver;
